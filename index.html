@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MIR Solution — solusi teknologi profesional. Mastery, Integrity, Revolution. Built on Trust. Driven by Growth.">
+  <title>MIR Solution | Mastery • Integrity • Revolution</title>
+  <style>
+    :root {
+      --navy:#071a33; --blue:#075bc5; --bright:#168cff; --sky:#eaf4ff;
+      --ink:#14263e; --muted:#64748b; --white:#fff; --line:#dce7f2;
+      --surface:#f5f8fc;
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:Arial,Helvetica,sans-serif; color:var(--ink); line-height:1.7; }
+    a { color:inherit; text-decoration:none; }
+    img { max-width:100%; display:block; }
+    .container { width:min(1140px,90%); margin:auto; }
+    .section { padding:82px 0; }
+    .eyebrow { color:var(--blue); font-size:.78rem; font-weight:800; letter-spacing:2px; text-transform:uppercase; }
+    h2 { color:var(--navy); font-size:clamp(1.8rem,3.8vw,2.7rem); line-height:1.2; margin:10px 0 20px; }
+    p { color:var(--muted); }
+    .btn { display:inline-block; padding:13px 22px; border-radius:9px; font-weight:700; transition:.2s; }
+    .btn-primary { background:var(--bright); color:white; }
+    .btn-primary:hover { background:#0874df; transform:translateY(-2px); }
+    .btn-outline { border:1px solid #a9c9ef; color:white; }
+    .btn-outline:hover { background:white; color:var(--navy); }
+    header { background:var(--navy); color:white; position:sticky; top:0; z-index:10; box-shadow:0 4px 18px #06152a20; }
+    .nav { min-height:78px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.8px; }
+    .brand img { width:54px; height:44px; object-fit:contain; border-radius:5px; }
+    .brand span { color:#56b5ff; }
+    nav ul { display:flex; list-style:none; gap:24px; flex-wrap:wrap; }
+    nav a { font-size:.9rem; color:#dbeafe; }
+    nav a:hover { color:#5dbaff; }
+    .hero { color:white; padding:92px 0; background:radial-gradient(circle at 80% 15%,#124b85 0,transparent 35%),linear-gradient(130deg,#06162b,#0b2b50); }
+    .hero-grid { display:grid; grid-template-columns:1.1fr .9fr; align-items:center; gap:55px; }
+    .hero .eyebrow { color:#70c4ff; }
+    .hero h1 { font-size:clamp(2.4rem,5.3vw,4.4rem); line-height:1.08; margin:17px 0; letter-spacing:-1.5px; }
+    .hero h1 span { color:#55b8ff; }
+    .hero .lead { color:#d4e5f8; font-size:1.08rem; max-width:640px; margin-bottom:27px; }
+    .hero-actions { display:flex; gap:13px; flex-wrap:wrap; }
+    .hero-logo { background:#ffffff0d; border:1px solid #ffffff25; border-radius:24px; padding:22px; box-shadow:0 25px 70px #0003; }
+    .hero-logo img { width:100%; border-radius:15px; }
+    .motto { margin-top:16px; text-align:center; color:#d9edff; font-size:.88rem; letter-spacing:1.2px; }
+    .motto strong { display:block; color:#70c4ff; font-size:1rem; margin-bottom:4px; }
+    .about { background:var(--surface); }
+    .about-grid { display:grid; grid-template-columns:.8fr 1.2fr; gap:55px; align-items:start; }
+    .years-panel { background:linear-gradient(145deg,var(--navy),#12549a); color:white; border-radius:22px; padding:36px; text-align:center; position:sticky; top:110px; }
+    .years-panel strong { display:block; font-size:5rem; line-height:1.1; color:#5dbaff; }
+    .years-panel p { color:#e0efff; margin-top:12px; }
+    .about-copy p { margin-bottom:16px; }
+    .philosophy-grid,.service-grid,.values-grid,.process-grid { display:grid; gap:20px; }
+    .philosophy-grid { grid-template-columns:repeat(3,1fr); margin-top:28px; }
+    .mini-card,.service-card,.value-card,.process-card { border:1px solid var(--line); border-radius:16px; padding:24px; background:white; }
+    .letter { width:48px; height:48px; display:grid; place-items:center; background:var(--sky); color:var(--blue); font-size:1.5rem; font-weight:800; border-radius:12px; margin-bottom:14px; }
+    .mini-card h3,.service-card h3,.value-card h3,.process-card h3 { color:var(--navy); margin-bottom:8px; }
+    .mini-card p,.service-card p,.value-card p,.process-card p { font-size:.94rem; }
+    .center-head { text-align:center; max-width:760px; margin:0 auto 42px; }
+    .vision { background:linear-gradient(135deg,#081b34,#0c3c70); color:white; }
+    .vision .center-head h2 { color:white; }
+    .vision .center-head p { color:#d5e7fa; font-size:1.12rem; }
+    .mission-list { max-width:850px; margin:0 auto; display:grid; gap:13px; }
+    .mission-item { display:flex; gap:15px; padding:18px 20px; border:1px solid #ffffff25; background:#ffffff0b; border-radius:13px; color:#e4f1ff; }
+    .mission-item b { color:#62bcff; }
+    .service-grid { grid-template-columns:repeat(3,1fr); }
+    .service-card { transition:.2s; }
+    .service-card:hover,.value-card:hover { transform:translateY(-4px); border-color:#8cc8ff; box-shadow:0 14px 32px #0b31500d; }
+    .service-icon { font-size:1.7rem; color:var(--blue); margin-bottom:12px; }
+    .values { background:var(--surface); }
+    .values-grid { grid-template-columns:repeat(5,1fr); }
+    .value-card { padding:20px; }
+    .value-card h3 { font-size:1rem; }
+    .value-card p { font-size:.88rem; }
+    .process-grid { grid-template-columns:repeat(4,1fr); }
+    .step { color:white; background:var(--blue); width:42px; height:42px; border-radius:12px; display:grid; place-items:center; font-weight:800; margin-bottom:16px; }
+    .commitment { background:var(--surface); }
+    .commit-box { max-width:900px; margin:auto; text-align:center; background:white; border:1px solid var(--line); padding:42px; border-radius:22px; }
+    .commit-box p { margin-bottom:15px; }
+    .signature { color:var(--blue); font-weight:800; font-size:1.15rem; margin-top:20px; }
+    .contact { background:var(--navy); color:white; text-align:center; padding:70px 0; }
+    .contact h2 { color:white; }
+    .contact p { color:#d5e7fa; max-width:700px; margin:0 auto 24px; }
+    footer { background:#041020; color:#a9bed6; padding:24px 0; text-align:center; font-size:.88rem; }
+    @media(max-width:900px) {
+      .hero-grid,.about-grid { grid-template-columns:1fr; }
+      .years-panel { position:static; }
+      .service-grid { grid-template-columns:repeat(2,1fr); }
+      .values-grid { grid-template-columns:repeat(3,1fr); }
+      .process-grid { grid-template-columns:repeat(2,1fr); }
+      .philosophy-grid { grid-template-columns:1fr; }
+    }
+    @media(max-width:600px) {
+      .nav { flex-direction:column; padding:14px 0; }
+      nav ul { justify-content:center; gap:12px 17px; }
+      nav a { font-size:.8rem; }
+      .hero { padding:65px 0; }
+      .section { padding:60px 0; }
+      .service-grid,.values-grid,.process-grid { grid-template-columns:1fr; }
+      .commit-box { padding:28px 20px; }
+      .hero-actions { flex-direction:column; }
+      .hero-actions .btn { text-align:center; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="MIR Solution Beranda">
+      <img src="images/logo.png.jpeg" alt="Logo MIR Solution">
+      <span>MIR SOLUTION</span>
+    </a>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#philosophy">Filosofi MIR</a></li>
+        <li><a href="#vision">Visi & Misi</a></li>
+        <li><a href="#services">Layanan</a></li>
+        <li><a href="#values">Nilai</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">MIR — Mastery • Integrity • Revolution</div>
+        <h1>Solusi Teknologi.<br><span>Pertumbuhan Berkelanjutan.</span></h1>
+        <p class="lead">Kami membantu bisnis berkembang melalui solusi teknologi yang relevan, layanan profesional, dan kemitraan yang dibangun atas kepercayaan.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Konsultasi dengan Kami</a>
+          <a class="btn btn-outline" href="#services">Jelajahi Layanan</a>
+        </div>
+      </div>
+      <div class="hero-logo">
+        <img src="images/logo.png.jpeg" alt="Identitas visual MIR Solution">
+        <div class="motto">
+          <strong>"THE SOLUTION TO ALL YOUR PROBLEMS".</strong>
+          SOLUSI DARI SEGALA MASALAH ANDA .
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="container about-grid">
+      <aside class="years-panel">
+        <strong>4</strong>
+        <h3>Tahun Pengalaman</h3>
+        <p>Fondasi keahlian, integritas, dan komitmen untuk terus berkembang.</p>
+      </aside>
+      <div class="about-copy">
+        <div class="eyebrow">01 — Tentang Kami</div>
+        <h2>Membangun Usaha dengan Keahlian dan Kepercayaan</h2>
+        <p>MIR merupakan identitas bisnis yang dibangun atas dasar keahlian, integritas, dan semangat untuk terus berkembang. Dengan pengalaman perjalanan bisnis selama <strong>4 tahun</strong>, MIR berkomitmen membangun usaha yang berkelanjutan melalui pelayanan profesional, kualitas kerja, serta hubungan jangka panjang yang berlandaskan kepercayaan.</p>
+        <p>Kami percaya bahwa keberhasilan bisnis tidak hanya diukur dari pencapaian hari ini, tetapi juga dari kemampuan untuk beradaptasi, berinovasi, dan menciptakan nilai tambah bagi pelanggan serta mitra bisnis.</p>
+        <p>Berbekal pengalaman, komitmen, dan visi jangka panjang, MIR terus berupaya memperkuat fondasi bisnis serta membuka peluang pertumbuhan untuk menghadapi tantangan dan kebutuhan masa depan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="philosophy">
+    <div class="container">
+      <div class="center-head">
+        <div class="eyebrow">02 — Filosofi MIR</div>
+        <h2>Prinsip yang Menjadi Identitas Kami</h2>
+        <p>Tiga nilai utama yang memandu cara kami bekerja, melayani, dan bertumbuh.</p>
+      </div>
+      <div class="philosophy-grid">
+        <article class="mini-card">
+          <div class="letter">M</div>
+          <h3>Mastery — Keahlian</h3>
+          <p>Melambangkan penguasaan bidang usaha, pengalaman, dan komitmen terhadap kualitas. Kompetensi dan peningkatan kemampuan menjadi fondasi untuk memberikan hasil kerja profesional.</p>
+        </article>
+        <article class="mini-card">
+          <div class="letter">I</div>
+          <h3>Integrity — Integritas</h3>
+          <p>Mencerminkan kejujuran, tanggung jawab, transparansi, dan konsistensi. Kami meyakini kepercayaan adalah aset penting dalam membangun reputasi dan kemitraan jangka panjang.</p>
+        </article>
+        <article class="mini-card">
+          <div class="letter">R</div>
+          <h3>Revolution — Transformasi</h3>
+          <p>Menggambarkan semangat untuk terus berinovasi, beradaptasi dengan perkembangan zaman, serta menciptakan peluang baru demi pertumbuhan berkelanjutan.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section vision" id="vision">
+    <div class="container">
+      <div class="center-head">
+        <div class="eyebrow">03 — Visi</div>
+        <h2>Menjadi Mitra Bisnis yang Terpercaya dan Berdaya Saing</h2>
+        <p>Menjadi perusahaan yang terpercaya, profesional, dan berdaya saing, dengan pertumbuhan berkelanjutan serta kemampuan untuk memberikan nilai nyata bagi pelanggan, mitra, dan lingkungan bisnis.</p>
+      </div>
+      <div class="center-head">
+        <div class="eyebrow">04 — Misi</div>
+        <h2>Langkah Nyata untuk Mewujudkan Visi</h2>
+      </div>
+      <div class="mission-list">
+        <div class="mission-item"><b>01</b><span>Mengutamakan kualitas dan profesionalisme dalam setiap produk, layanan, dan aktivitas bisnis.</span></div>
+        <div class="mission-item"><b>02</b><span>Membangun kepercayaan jangka panjang melalui integritas, tanggung jawab, dan pelayanan yang konsisten.</span></div>
+        <div class="mission-item"><b>03</b><span>Mendorong inovasi dan pengembangan usaha untuk menjawab kebutuhan pasar yang terus berkembang.</span></div>
+        <div class="mission-item"><b>04</b><span>Memperluas peluang dan kemitraan strategis yang mendukung pertumbuhan bisnis secara berkelanjutan.</span></div>
+        <div class="mission-item"><b>05</b><span>Menciptakan nilai tambah bagi pelanggan dan mitra melalui solusi yang relevan, efektif, dan berorientasi pada kebutuhan.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="container">
+      <div class="center-head">
+        <div class="eyebrow">Layanan Kami</div>
+        <h2>Solusi Teknologi untuk Kebutuhan Bisnis</h2>
+        <p>Layanan dapat disesuaikan dengan kebutuhan operasional dan tujuan setiap pelanggan.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card"><div class="service-icon">📹</div><h3>JASA PEMASANGAN CCTV SEMUA MEREK</h3><p>kami melayani pemasangan CCTV untuk rumah, kantor, toko, gudang, dan area lainnya.</p></article>
+        <article class="service-card"><div class="service-icon">🛠️</div><h3>JASA PERBAIKAN/SERVICE CCTV</h3><p>penanganan cepat dan profesional untuk semua kendala CCTV Anda.</p></article>
+        <article class="service-card"><div class="service-icon">💻</div><h3>JASA PERBAIKAN KOMPUTER & LAPTOP</h3><p>Melayani perbaikan komputer dan laptop, instalasi ulang, perbaikan software dan hardware, serta penggantian sparepart berbagai merek.</p></article>
+        <article class="service-card"><div class="service-icon">📶</div><h3>JASA PEMASANGAN WIFI/ALL PROVIDER</h3><p>Internet stabil dan cepat untuk rumah,kantor,atau,bisnis Anda.</p></article>
+        <article class="service-card"><div class="service-icon">📱</div><h3>JASA PERBAIKAN HP & PENYEDIA SPERPAT HP</h3><p>Kami melayani jasa perbaikan handphone berbagai merek, mulai dari kerusakan ringan hingga berat, serta penyediaan sperpart berkualitas seperti LCD, baterai, konektor charger, speaker, kamera, dan komponen lainnya. Dikerjakan dengan teliti, profesional, dan mengutamakan kualitas serta kepuasan pelanggan.</p></article>
+        <article class="service-card"><div class="service-icon">🖨️</div><h3>Jasa Perbaikan Printer Epson & Canon</h3><p>Melayani servis printer, mengatasi masalah cetak, perbaikan kerusakan, dan penggantian sparepart.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section values" id="values">
+    <div class="container">
+      <div class="center-head">
+        <div class="eyebrow">05 — Nilai-Nilai Perusahaan</div>
+        <h2>Nilai yang Kami Pegang</h2>
+      </div>
+      <div class="values-grid">
+        <article class="value-card"><h3>Integrity</h3><p>Menjunjung tinggi kejujuran dan tanggung jawab.</p></article>
+        <article class="value-card"><h3>Professionalism</h3><p>Mengutamakan standar kerja dan pelayanan profesional.</p></article>
+        <article class="value-card"><h3>Trust</h3><p>Membangun hubungan berdasarkan kepercayaan dan konsistensi.</p></article>
+        <article class="value-card"><h3>Innovation</h3><p>Terbuka terhadap perubahan, teknologi, dan gagasan baru.</p></article>
+        <article class="value-card"><h3>Sustainable Growth</h3><p>Mengembangkan usaha dengan visi jangka panjang.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="process">
+    <div class="container">
+      <div class="center-head">
+        <div class="eyebrow">Cara Kami Bekerja</div>
+        <h2>Proses yang Terstruktur dan Transparan</h2>
+      </div>
+      <div class="process-grid">
+        <article class="process-card"><div class="step">01</div><h3>Konsultasi</h3><p>Memahami kebutuhan, tujuan, dan tantangan pelanggan.</p></article>
+        <article class="process-card"><div class="step">02</div><h3>Perencanaan</h3><p>Menyusun pendekatan dan solusi yang relevan.</p></article>
+        <article class="process-card"><div class="step">03</div><h3>Implementasi</h3><p>Menjalankan pekerjaan sesuai ruang lingkup yang disepakati.</p></article>
+        <article class="process-card"><div class="step">04</div><h3>Evaluasi</h3><p>Meninjau hasil dan mendukung kebutuhan lanjutan.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section commitment">
+    <div class="container">
+      <div class="commit-box">
+        <div class="eyebrow">06 — Komitmen Kami</div>
+        <h2>Terus Bertumbuh, Bersama dalam Kepercayaan</h2>
+        <p>Empat tahun perjalanan bisnis menjadi bagian dari fondasi pengalaman dan pembelajaran yang terus kami kembangkan. Bagi MIR, perjalanan tersebut bukanlah titik akhir, melainkan landasan untuk melangkah lebih jauh.</p>
+        <p>Kami berkomitmen untuk terus meningkatkan kualitas, memperkuat kepercayaan, dan mengembangkan peluang bisnis dengan mengedepankan integritas serta orientasi jangka panjang.</p>
+        <div class="signature">MIR — Built on Trust. Driven by Growth.</div>
+        <p><em>Dibangun dengan kepercayaan, digerakkan oleh pertumbuhan.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="eyebrow">Mari Terhubung</div>
+      <h2>Diskusikan Kebutuhan Teknologi Anda</h2>
+      <p>Hubungi MIR untuk membicarakan kebutuhan layanan, peluang kerja sama, atau solusi teknologi bagi bisnis Anda.</p>
+      <!-- Ganti nomor contoh di bawah dengan nomor WhatsApp bisnis Anda -->
+      <a class="btn btn-primary" href="https://wa.me/6281275298975" target="_blank" rel="noopener noreferrer">Hubungi Kami via WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© 2025 MIR Solution. Mastery • Integrity • Revolution. Built on Trust. Driven by Growth.</div>
+</footer>
+
+</body>
+</html>
